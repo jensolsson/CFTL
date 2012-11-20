@@ -1,0 +1,23 @@
+
+
+
+<!ELEMENT EvidenceCollection (Evidence*)>
+
+<!ELEMENT Evidence (Chunk+|Timestamp*|Data*)>
+<!ATTLIST Evidence title CDATA #REQUIRED>
+<!ATTLIST Evidence type CDATA #REQUIRED>
+<!ATTLIST Evidence id ID #REQUIRED>
+<!ATTLIST Evidence parent IDREF "">
+
+<!ELEMENT Chunk EMPTY>
+<!ATTLIST Chunk from CDATA #REQUIRED>
+<!ATTLIST Chunk to CDATA #REQUIRED>
+
+<!ELEMENT Timestamp EMPTY>
+<!ATTLIST Timestamp type CDATA #REQUIRED>
+<!ATTLIST Timestamp value CDATA #REQUIRED>
+
+<!ELEMENT Data EMPTY>
+<!ATTLIST Data name CDATA #REQUIRED>
+<!ATTLIST Data value CDATA #REQUIRED>
+
